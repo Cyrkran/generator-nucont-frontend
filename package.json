@@ -4,7 +4,10 @@
   "description": "Gerador de módulo do nucont-frontend",
   "main": "index.js",
   "dependencies": {
-    "yeoman-generator": "^3.1.1"
+    "decamelize": "^2.0.0",
+    "uppercamelcase": "^3.0.0",
+    "yeoman-generator": "^3.1.1",
+    "yosay": "^2.0.2"
   },
   "devDependencies": {},
   "files": [

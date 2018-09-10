@@ -1,0 +1,11 @@
+"use strict";
+
+angular.module("modules.<%= module%>").config(routeConfig);
+
+function routeConfig($stateProvider) {
+    $stateProvider.state("app.<%= module%>", {
+        url: "<%= url %>",
+        views: {},
+        resolve: {}
+    });
+}

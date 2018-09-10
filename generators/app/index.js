@@ -70,7 +70,7 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath(template),
       this.destinationPath(`client/modules/${this.props.module}/${file}`),
-      this.data
+      this.props
     );
   }
 
@@ -81,21 +81,25 @@ module.exports = class extends Generator {
    *
    */
   writing() {
-    /*
-    diretório
-      %diretorio%.controller.js
-      %diretorio%.html
-      %diretorio%.module.js
-      %diretorio%.sass
-      %diretorio%.test.js
-    */
-    let module = this._getModuleName(this.props.module);
+    // this.props.import = this.props.extends
+    //   ? "import { Controller } from '../../_imports/Controller/Controller'"
+    //   : "";
+    this.props.controllerImport = `import { ${
+      this.props.controller
+    } } from './${this.props.module}/${this.props.module}.controller.js';`;
 
-    // this._write("module-html-template.txt", `${module}.html`);
-    // this._write("module-sass-template.txt", `${module}.sass`);
-    this._write("module-controller-template.txt", `${module}.sass`);
-    // this._write("module-template.txt", `${module}.sass`);
-    // this._write("module-test-template.txt", `${module}.sass`);
+    console.log(this.props);
+    this._write("module.html.template.txt", `${this.props.module}.html`);
+    this._write("module.sass.template.txt", `${this.props.module}.sass`);
+
+    this._write(
+      "module.controller.template.txt",
+      `${this.props.module}.controller.js`
+    );
+
+    this._write("module.template.txt", `${this.props.module}.module.js`);
+
+    this._write("module.test.template.txt", `${this.props.module}.test.js`);
   }
 
   install() {

@@ -1,0 +1,8 @@
+import angular from "angular";
+import { chai } from "meteor/practicalmeteor:chai";
+<%= controllerImport %>
+import { filter } from "@uirouter/core";
+
+describe("<%= controller %>", function() {
+    
+});

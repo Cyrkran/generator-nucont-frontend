@@ -1,0 +1,9 @@
+"use strict";
+import { _ } from "lodash";
+
+
+export class <%= props.module %>Ctrl {
+    constructor(<%= providers %>) {
+        
+    }
+}

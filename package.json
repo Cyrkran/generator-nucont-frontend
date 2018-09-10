@@ -1,0 +1,33 @@
+{
+  "name": "generator-nucont-frontend",
+  "version": "0.0.1",
+  "description": "Gerador de módulo do nucont-frontend",
+  "main": "index.js",
+  "dependencies": {
+    "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {},
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyrkran/generator-nucont-frontend.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "angular",
+    "module",
+    "javascript",
+    "generator"
+  ],
+  "author": "Paulo Schaper <pauloschaper.nucont@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cyrkran/generator-nucont-frontend/issues"
+  },
+  "homepage": "https://github.com/Cyrkran/generator-nucont-frontend#readme"
+}
